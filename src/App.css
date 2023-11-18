@@ -1,38 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	display: flex;
+	padding: 8px 16px;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
 .App {
-  text-align: center;
+	display: flex;
+	width: 576px;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
+	border-radius: 16px;
+	background: var(--white, #fff);
+	/* shadow-base */
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hr-line {
+	margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #333;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cityInput {
+	display: flex;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cityWindow {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 500px;
+	height: 300px;
 }
